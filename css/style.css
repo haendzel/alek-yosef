@@ -1,3 +1,5 @@
+@import url("responsive.css");
+
 html, body {
   margin: 0px;
   padding: 0px;
@@ -10,6 +12,14 @@ html, body {
 a {
   text-decoration: none;
   color: black;
+}
+
+a:hover {
+  color: #b8b766;
+}
+
+a:active {
+  color: #9d9d9d;
 }
 p {
   line-height: 5px;
@@ -33,25 +43,27 @@ h3 {
   padding-top: 50px;
 }
 
-.container{
-  display: flex;
-  margin: 0px;
-  padding: 0px;
-  width: 100vw;
-  min-height: 100vh;
+#container{
+  z-index: 0;
   background: url("../img/background.jpg") repeat;
-  background-size: 100vw;
+  background-size: 100%;
+  margin: 0;
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
 }
 
-.container::before {
+.frame {
   content: '';
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
   border: 20px solid #e0e0e0;
-  z-index: 100;
 }
 
 .logo {
@@ -66,6 +78,7 @@ h3 {
 }
 
 .artworks {
+  z-index: 30;
   margin-top: 170px;
   display: flex;
   flex-flow: row wrap;
@@ -81,12 +94,7 @@ h3 {
   flex: 1 0 calc(33,33% - 14px); 
   justify-content: center;
   margin: 20px;
-}
-.item:hover {
-  background: white;
-  background-size: 100% 100%;
-  border: 3px solid red;
-  transition: ease 0.5s;
+  opacity: 1;
 }
 
 figure {
@@ -100,6 +108,11 @@ figure img{
   width: 100%;
 }
 
+figure img:hover{
+  opacity: 0.5;
+  transition: ease 0.5s;
+}
+
 /* figure::hover {
   background: white;
   opacity: 50%;
@@ -108,8 +121,10 @@ figure img{
 
 .menu {
   position: relative;
-  z-index: 1;
-  padding: 70px;
+  z-index: 31;
+  padding-top: 50px;
+  padding-right: 80px;
+  padding-left: 80px;
   border-left: 1px solid #333;
   text-align: right;
 }
@@ -125,11 +140,38 @@ ul {
   padding: 0;
 }
 
-.down-media {
-  position: absolute;
-  bottom: 20px;
+.down-menu {
+  margin-top: 200px;
 }
 
-.contact-menu h4 {
+.contact-menu h4, .social-media h4 {
   font-size: 1.875em;
+  margin: 0px;
+}
+
+.social-media h4:hover {
+  color: #b8b766;
+}
+
+.social-media h4 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.social-media {
+  margin-bottom: 15px;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #9d9d9d;
+}
+
+.navlink a:hover {
+  color: #b8b766;
+}
+
+i {
+  font-size: 1.875em;
+  padding-right: 10px;
 }
