@@ -14,9 +14,27 @@ p {
   color: white;
 }
 
+h1 {
+  padding: 30px;
+}
+
 .container{
+  margin: 0px;
+  padding: 0px;
   width: 100vw;
   min-height: 100vh;
   background: url("../img/background.jpg") no-repeat;
-  background-size: 100%;
+  background-size: 100vw;
+  position: fixed;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-bottom: none;
+  border: 20px solid #e0e0eb;
 }
