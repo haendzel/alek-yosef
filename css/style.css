@@ -1,0 +1,22 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  min-height: 100vh;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+p {
+  line-height: 5px;
+  font-size: 13px;
+  color: white;
+}
+
+.container{
+  width: 100vw;
+  min-height: 100vh;
+  background: url("../img/background.jpg") no-repeat;
+  background-size: 100%;
+}
