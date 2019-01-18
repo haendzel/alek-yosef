@@ -3,10 +3,13 @@ html, body {
   padding: 0px;
   width: 100vw;
   min-height: 100vh;
+  font-family: bebas-neue, sans-serif;
   font-weight: 400;
+  font-style: normal;
 }
 a {
   text-decoration: none;
+  color: black;
 }
 p {
   line-height: 5px;
@@ -16,6 +19,18 @@ p {
 
 h1 {
   padding: 30px;
+}
+
+h3 {
+  font-family: bebas-neue, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #b8b766;
+  font-size: 1.500em;
+}
+
+.portfolio {
+  padding-top: 50px;
 }
 
 .container{
@@ -35,12 +50,13 @@ h1 {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  border: 10px solid #333;
+  border: 20px solid #e0e0e0;
+  z-index: 100;
 }
 
 .logo {
   left: 100px;
-  z-index: 10;
+  z-index: 12;
   position: absolute;
   background: url("../img/logo.png");
   margin-top: 50px;
@@ -50,6 +66,7 @@ h1 {
 }
 
 .artworks {
+  margin-top: 170px;
   display: flex;
   flex-flow: row wrap;
   padding-left: 100px;
@@ -65,6 +82,12 @@ h1 {
   justify-content: center;
   margin: 20px;
 }
+.item:hover {
+  background: white;
+  background-size: 100% 100%;
+  border: 3px solid red;
+  transition: ease 0.5s;
+}
 
 figure {
 display: block;
@@ -77,7 +100,36 @@ figure img{
   width: 100%;
 }
 
+/* figure::hover {
+  background: white;
+  opacity: 50%;
+}
+*/
+
 .menu {
-  z-index: 11;
-  padding: 50px;
+  position: relative;
+  z-index: 1;
+  padding: 70px;
   border-left: 1px solid #333;
+  text-align: right;
+}
+
+.navigation {
+  font-size: 1.875em;
+  line-height: 1.400em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.down-media {
+  position: absolute;
+  bottom: 20px;
+}
+
+.contact-menu h4 {
+  font-size: 1.875em;
+}
