@@ -19,13 +19,13 @@ h1 {
 }
 
 .container{
+  display: flex;
   margin: 0px;
   padding: 0px;
   width: 100vw;
   min-height: 100vh;
-  background: url("../img/background.jpg") no-repeat;
+  background: url("../img/background.jpg") repeat;
   background-size: 100vw;
-  position: fixed;
 }
 
 .container::before {
@@ -35,5 +35,49 @@ h1 {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  border: 20px solid #e0e0eb;
+  border: 10px solid #333;
 }
+
+.logo {
+  left: 100px;
+  z-index: 10;
+  position: absolute;
+  background: url("../img/logo.png");
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 150px;
+  height: 100px;
+}
+
+.artworks {
+  display: flex;
+  flex-flow: row wrap;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.item {
+  width: 260px;
+  height: 260px;
+  border: 1px black solid;
+  background: #f1f1f1;
+  flex: 1 0 calc(33,33% - 14px); 
+  justify-content: center;
+  margin: 20px;
+}
+
+figure {
+display: block;
+-webkit-margin-before: 1px;
+-webkit-margin-after: 1px;
+-webkit-margin-start: 1px;
+-webkit-margin-end: 1px;
+}
+figure img{
+  width: 100%;
+}
+
+.menu {
+  z-index: 11;
+  padding: 50px;
+  border-left: 1px solid #333;
