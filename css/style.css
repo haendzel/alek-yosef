@@ -83,7 +83,7 @@ h3 {
   display: flex;
   flex-flow: row wrap;
   padding-left: 100px;
-  padding-right: 100px;
+  padding-right: 300px;
 }
 
 .item {
@@ -120,7 +120,9 @@ figure img:hover{
 */
 
 .menu {
-  position: relative;
+  right: 0px;
+  background: white;
+  position: fixed;
   z-index: 31;
   padding-top: 50px;
   padding-right: 80px;
