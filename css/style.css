@@ -43,7 +43,7 @@ h3 {
   padding-top: 50px;
 }
 
-#container{
+#container-fluid{
   z-index: 0;
   background: url("../img/background.jpg") repeat;
   background-size: 100%;
@@ -56,15 +56,18 @@ h3 {
   left: 0;
 }
 
-.frame {
+/*.frame {
   content: '';
   position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  border: 20px solid #e0e0e0;
-}
+  border-color: black;
+  border-style: solid;
+  top: 8px;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  border-width: 5px 5px 5px 5px;
+  z-index: 100;
+}*/
 
 .logo {
   left: 100px;
@@ -80,19 +83,15 @@ h3 {
 .artworks {
   z-index: 30;
   margin-top: 170px;
-  display: flex;
-  flex-flow: row wrap;
-  padding-left: 100px;
-  padding-right: 300px;
+  margin-left: 90px;
+  
 }
 
 .item {
-  width: 260px;
-  height: 260px;
+  min-width: 250px;
+  min-height: 250px;
   border: 1px black solid;
   background: #f1f1f1;
-  flex: 1 0 calc(33,33% - 14px); 
-  justify-content: center;
   margin: 20px;
   opacity: 1;
 }
@@ -124,13 +123,17 @@ figure img:hover{
   background: white;
   position: fixed;
   z-index: 31;
-  padding-top: 50px;
-  padding-right: 80px;
-  padding-left: 80px;
-  border-left: 1px solid #333;
+  border-left: 0.3px solid #333;
   text-align: right;
+  height: 100%;
 }
 
+.upper-menu {
+  padding-right: 100px;
+  position: fixed;
+  top: 50px;
+  right: 0px;
+}
 .navigation {
   font-size: 1.875em;
   line-height: 1.400em;
@@ -143,7 +146,11 @@ ul {
 }
 
 .down-menu {
-  margin-top: 200px;
+  padding-right: 100px;
+  position: absolute;
+  margin-top: 250px;
+  right: 0px;
+  bottom: 100px;
 }
 
 .contact-menu h4, .social-media h4 {
