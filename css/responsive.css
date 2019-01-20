@@ -1,0 +1,58 @@
+/* Large desktop */
+
+@media (min-width: 1900px) {
+.item {
+  min-height: 350px;
+}
+.artworks {
+  padding-left: 100px;
+  padding-right: 70px;
+}
+.logo {
+  left: 100px;
+  }
+.portfolio {
+  padding-top: 100px;
+}
+.upper-menu {
+  padding-right: 130px;
+}
+.down-menu {
+  bottom: 50px;
+  padding-right: 130px;
+}
+h3 {
+  font-size: 2.035em;
+}
+.navigation {
+  font-size: 2.875em;
+  line-height: 1.400em;
+}
+.contact-menu h4, .social-media h4 {
+  font-size: 2.875em;
+}
+.copyright {
+  font-size: 16px;
+  color: #9d9d9d;
+}
+a {
+  text-decoration: none;
+}
+.fab {
+  font-size: 2.5em;
+  margin: 5px;
+}
+}
+@media (min-width: 1200px) {
+ .down-menu {
+  bottom: 20px;
+}
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { ... }
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { ... }
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { ... }
