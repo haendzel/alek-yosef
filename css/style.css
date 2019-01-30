@@ -8,8 +8,20 @@ html, body {
   font-family: bebas-neue, sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: #fffff8;
   background: url("../img/background.jpg") repeat;
 }
+
+/* body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+} */
+
 a:any-link {
   text-decoration: none;
 }
@@ -40,6 +52,10 @@ h3 {
   font-style: normal;
   color: #b8b766;
   font-size: 1.500em;
+}
+
+.container {
+  z-index: 1;
 }
 
 .portfolio {
@@ -74,19 +90,12 @@ h3 {
 .logo {
   left: 50px;
   z-index: 12;
-  position: absolute;
-  background: url("../img/logo.png");
-  margin-top: 50px;
-  margin-bottom: 50px;
-  width: 150px;
-  height: 100px;
 }
 
 .artworks {
   z-index: 30;
-  margin-top: 170px;
-  padding-left: 50px;
-  padding-right: 60px;
+  padding-top: 100px;
+  right: 0;
   
 }
 
@@ -96,21 +105,6 @@ h3 {
   opacity: 1;
 }
 
-figure {
-position: relative;
-display: block;
-border: 1px black solid;
-margin-bottom: 20px;
-background: white;
-overflow:hidden;
-}
-figure img{
-  width: 100%;
-}
-
-figure img:hover {
-
-}
 .figure-img {
 margin-bottom: 0px;
 }
@@ -134,16 +128,15 @@ margin-bottom: 0px;
 .menu {
   right: 0px;
   background: white;
-  position: fixed;
-  z-index: 31;
+  z-index: 100;
   border-left: 0.3px solid #333;
   text-align: right;
   height: 100%;
+  position: fixed;
 }
 
 .upper-menu {
   padding-right: 90px;
-  position: fixed;
   top: 50px;
   right: 0px;
 }
@@ -217,11 +210,9 @@ i {
   height:100%;
   color: black;
   text-align:center;
-  padding-top: 25%;
+  padding-top: 40%;
   font-size: 1.8em;
-  font-size:;
   opacity:0.5;
-  line-height:150px;
 }
 
 .slide:before {
