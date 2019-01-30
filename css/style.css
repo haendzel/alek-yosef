@@ -53,13 +53,36 @@ h3 {
   color: #b8b766;
   font-size: 1.500em;
 }
-
+.art:hover {
+}
+.art:before {
+  position: absolute;
+  content:attr(title);
+  background: rgba(255, 255,255, .75);
+  text-align: center;
+  padding-top: 45%;
+  opacity: 0.1;
+  transition: opacity 0.5s ease;
+  width: 90%;
+  height: 90%;
+  margin: 0;
+  font-size: 31px;
+}
+.art:hover:before {
+  opacity: 1;
+}
+.artist-name {
+  padding-top: 50px;
+  font-size: 31px;
+  color: black;
+  opacity: 0.5;
+}
 .container {
   z-index: 1;
 }
 
 .portfolio {
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 #container-fluid{
@@ -96,13 +119,6 @@ h3 {
   z-index: 30;
   padding-top: 100px;
   right: 0;
-  
-}
-
-.item {
-  background: #f1f1f1;
-  margin: 20px;
-  opacity: 1;
 }
 
 .figure-img {
@@ -201,29 +217,4 @@ i {
 
 .col-lg-4 {
   padding-bottom: 10px;
-}
-
-.slide:before {
-  position:absolute;
-  background:rgba(255,255,255, .75);
-  width:100%;
-  height:100%;
-  color: black;
-  text-align:center;
-  padding-top: 40%;
-  font-size: 1.8em;
-  opacity:0.5;
-}
-
-.slide:before {
-  content:attr(title);
-  left:0;
-  bottom:-100%;
-  transition: opacity 0.5s ease,
-              bottom 0.5s ease;
-}
-
-.slide:hover:before {
-  bottom:0;
-  opacity:1;
 }
