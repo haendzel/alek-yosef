@@ -79,7 +79,7 @@ h3 {
 }
 .artist-name-mobile {
   position: absolute;
-  left: 15px;
+  left: 30px;
   color: black;
   opacity: 0.5;
 }
@@ -270,5 +270,5 @@ label {
 
 .fa-bars {
   position: absolute;
-  right: 15px;
+  right: 30px;
 }
