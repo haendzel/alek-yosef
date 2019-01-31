@@ -45,18 +45,23 @@ a {
 .col-lg-4 {
   padding-bottom: 25px;
 }
-.slide:before {
-  padding-top: 30%;
-  font-size: 2.5em;
-}
 .artist-name {
   font-size: 2.5em;
 }
 }
 @media (min-width: 1200px) {
+  .down-menu {
+  bottom: 20px;
+}
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
  .down-menu {
   bottom: 20px;
 }
+  .menu, .upper-menu, .down-menu {
+    padding-left: 20px;
+    padding-right: 30px;
+  }
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
