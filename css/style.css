@@ -257,18 +257,27 @@ label {
 }
 #menu {
   background-color: #ffffff;
+  text-align: center;
   border-bottom: black solid 1px;
   overflow: hidden;
   max-height: 0;
-  padding: 0;
+  font-size: 1.5em;
   margin: 0 auto;
   -webkit-transition: all 0.3s ease;
 }
 #menu-toggle:checked + #menu {
-  max-height: 400px;
+  max-height: 800px;
 }
 
 .fa-bars {
   position: absolute;
   right: 30px;
+}
+
+.copyright-mobile, .contact-menu-mobile, .social-media-mobile {
+  font-size: 0.5em;
+}
+
+.contact-menu-mobile {
+  padding-top: 40px;
 }

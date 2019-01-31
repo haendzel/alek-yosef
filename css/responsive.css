@@ -57,7 +57,18 @@ a {
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-
+.nav-mobile {
+    display: block;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 200;
+  }
+    .navbar {
+      display: none;
+      visibility: hidden;
+    }
 }
  
 /* Landscape phone to portrait tablet */
@@ -77,4 +88,17 @@ a {
 }
  
 /* Landscape phones and down */
-@media (max-width: 480px) { ... }
+@media (max-width: 480px) {
+  .nav-mobile {
+    display: block;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 200;
+  }
+    .navbar {
+      display: none;
+      visibility: hidden;
+    }
+}
