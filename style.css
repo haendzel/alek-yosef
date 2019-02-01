@@ -1,119 +1,109 @@
-/* Theme Name: Alek Jozefczyk Portfolio
+/*
+Theme Name: Alek Jozefczyk
+Theme URI: 
 Author: Filip Handzel
-Author URI: https://haendzel.github.io/front-end-portfolio/
-Description: Design by Alek Jozefczyk and development from pure HTML/CSS and JS for Wordpress by Filip Handzel. It's just portfolio for amazing artist! 
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html */
+Author URI: github.com/haendzel
+Description: A theme was made from pure CSS and HTML static website four awesome artist and director Alek Jozefczyk. Check him!
+Version: 1.0.0
+License: MIT
+License URI: http://www.gnu.org/licenses/gpl.html
+Tags: one-column, right-sidebar, responsive-layout, fluid-layout, custom-menu
+Text Domain: bootstrap-four
 
-/* =WordPress Core
--------------------------------------------------------------- */
-.alignnone {
-  margin: 5px 20px 20px 0;
+alek-jozefczyk WordPress Theme, Copyright 2019 Filip Handzel.
+*/
+
+/* * * * * * * * * * * * * * *
+ * WordPress Content Classes
+ * * * * * * * * * * * * * * */
+
+@import url("css/responsive.css");
+
+@import url("https://use.typekit.net/nsn6cfm.css");
+
+img {
+  border: none;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
 }
-
-.aligncenter,
-div.aligncenter {
-  display: block;
-  margin: 5px auto 5px auto;
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
 }
-
 .alignright {
-  float:right;
-  margin: 5px 0 20px 20px;
-}
-
-.alignleft {
-  float: left;
-  margin: 5px 20px 20px 0;
-}
-
-a img.alignright {
+  display: inline;
   float: right;
-  margin: 5px 0 20px 20px;
+  margin: 0.4rem 0 1.6rem 1.6rem;
 }
-
-a img.alignnone {
-  margin: 5px 20px 20px 0;
-}
-
-a img.alignleft {
+.alignleft {
+  display: inline;
   float: left;
-  margin: 5px 20px 20px 0;
+  margin: 0.4rem 1.6rem 1.6rem 0;
 }
-
-a img.aligncenter {
+.aligncenter {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0.4rem auto 1.6rem auto;
 }
-
 .wp-caption {
-  background: #fff;
-  border: 1px solid #f0f0f0;
-  max-width: 96%; /* Image does not overflow the content area */
-  padding: 5px 3px 10px;
-  text-align: center;
+  max-width: 100%;
 }
-
-.wp-caption.alignnone {
-  margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignleft {
-  margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignright {
-  margin: 5px 0 20px 20px;
-}
-
-.wp-caption img {
-  border: 0 none;
-  height: auto;
-  margin: 0;
-  max-width: 98.5%;
-  padding: 0;
-  width: auto;
-}
-
-.wp-caption p.wp-caption-text {
-  font-size: 11px;
-  line-height: 17px;
-  margin: 0;
-  padding: 0 4px 5px;
-}
-
-/* Text meant only for screen readers. */
-.screen-reader-text {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-    white-space: nowrap;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
-
-.screen-reader-text:focus {
-  background-color: #f1f1f1;
-  border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  clip: auto !important;
-  color: #21759b;
+.wp-caption img[class*="wp-image-"] {
   display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
+  margin: 0;
+}
+.wp-caption-text {
+
+}
+.sticky {
+  background: #f7f7f9;
+  padding: 1rem;
+}
+.bypostauthor {
+  background: #f7f7f9;
+  padding: 0.5rem;
+}
+.gallery-caption {
   font-weight: bold;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000; /* Above WP toolbar. */
+}
+/* Text meant only for screen readers */
+.says,
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+}
+/* * * * * * * * * * * * * * *
+ * ??? profit
+ * * * * * * * * * * * * * * */
+
+body > nav.navbar {
+  border-radius: 0;
 }
 
-@import url("responsive.css");
+.main-container {
+  border-radius: .25rem;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.widget {
+  margin-bottom: 2rem;
+}
+
+.post {
+  margin-bottom: 2rem;
+}
+
+nav.navbar {
+  margin-bottom: 2rem;
+}
 
 html, body {
   margin: 0px;
@@ -124,7 +114,7 @@ html, body {
   font-weight: 400;
   font-style: normal;
   background-color: #fffff8;
-  background: url("../img/background.jpg") repeat;
+  background: url("img/background.jpg") repeat;
 }
 
 /* body {
@@ -216,6 +206,19 @@ h3 {
   left: 0;
 }
 
+/*.frame {
+  content: '';
+  position: fixed;
+  border-color: black;
+  border-style: solid;
+  top: 8px;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  border-width: 5px 5px 5px 5px;
+  z-index: 100;
+}*/
+
 .logo {
   left: 50px;
   z-index: 12;
@@ -248,13 +251,15 @@ margin-bottom: 0px;
 }
 
 .menu {
-  right: 0px;
-  background: white;
-  z-index: 500;
-  border-left: 0.3px solid #333;
-  text-align: right;
-  height: 100%;
-  position: fixed;
+    right: 0px;
+    background: white;
+    z-index: 501;
+    border-left: 1px solid #333;
+    text-align: right;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    margin: 0;
 }
 
 .upper-menu {
@@ -400,7 +405,7 @@ label {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.95); /* Black w/ opacity */
-  z-index: 499;
+  z-index: 500;
 }
 
 /* Modal Content */
@@ -425,117 +430,4 @@ label {
   color: #000;
   text-decoration: none;
   cursor: pointer;
-}
-
-/* Large desktop */
-
-@media (min-width: 1900px) {
-.item {
-  min-height: 350px;
-}
-.artworks {
-  padding-left: 100px;
-  padding-right: 70px;
-}
-.logo {
-  left: 100px;
-  }
-.portfolio {
-  padding-top: 50px;
-}
-.upper-menu {
-  padding-right: 130px;
-}
-.down-menu {
-  bottom: 50px;
-  padding-right: 130px;
-}
-h3 {
-  font-size: 2.035em;
-}
-.navigation {
-  font-size: 2.875em;
-  line-height: 1.400em;
-}
-.contact-menu h4, .social-media h4 {
-  font-size: 2.875em;
-}
-.copyright {
-  font-size: 16px;
-  color: #9d9d9d;
-}
-a {
-  text-decoration: none;
-}
-.fab {
-  font-size: 2.5em;
-  margin: 5px;
-}
-.col-lg-4 {
-  padding-bottom: 25px;
-}
-.artist-name {
-  font-size: 2.5em;
-}
-}
-@media (min-width: 1200px) {
-  .down-menu {
-  bottom: 20px;
-}
-}
-@media (min-width: 1024px) and (max-width: 1199px) {
- .down-menu {
-  bottom: 20px;
-}
-  .menu, .upper-menu, .down-menu {
-    padding-left: 20px;
-    padding-right: 30px;
-  }
-}
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-.nav-mobile {
-    display: block;
-    visibility: visible;
-    top: 0;
-    left: 0;
-    position: absolute;
-    z-index: 200;
-  }
-    .navbar {
-      display: none;
-      visibility: hidden;
-    }
-}
- 
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-    .nav-mobile {
-    display: block;
-    visibility: visible;
-    top: 0;
-    left: 0;
-    position: absolute;
-    z-index: 200;
-  }
-    .navbar {
-      display: none;
-      visibility: hidden;
-    }
-}
- 
-/* Landscape phones and down */
-@media (max-width: 480px) {
-  .nav-mobile {
-    display: block;
-    visibility: visible;
-    top: 0;
-    left: 0;
-    position: absolute;
-    z-index: 200;
-  }
-    .navbar {
-      display: none;
-      visibility: hidden;
-    }
 }
