@@ -1,0 +1,541 @@
+/* Theme Name: Alek Jozefczyk Portfolio
+Author: Filip Handzel
+Author URI: https://haendzel.github.io/front-end-portfolio/
+Description: Design by Alek Jozefczyk and development from pure HTML/CSS and JS for Wordpress by Filip Handzel. It's just portfolio for amazing artist! 
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html */
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+.alignright {
+  float:right;
+  margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%; /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+    white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+@import url("responsive.css");
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  min-height: 100%;
+  font-family: bebas-neue, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #fffff8;
+  background: url("../img/background.jpg") repeat;
+}
+
+/* body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+} */
+
+a:any-link {
+  text-decoration: none;
+}
+a {
+  color: black;
+}
+
+a:hover {
+  color: #b8b766;
+}
+
+a:active {
+  color: #9d9d9d;
+}
+p {
+  line-height: 5px;
+  font-size: 13px;
+  color: white;
+}
+
+h1 {
+  padding: 30px;
+}
+
+h3 {
+  font-family: bebas-neue, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #b8b766;
+  font-size: 1.500em;
+}
+.art:before {
+  position: absolute;
+  content:attr(title);
+  background: rgba(255, 255,255, .75);
+  text-align: center;
+  padding-top: 40%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  width: 90%;
+  height: 90%;
+  margin: 0;
+  font-size: 31px;
+}
+.art:hover:before, .art:focus:before {
+  opacity: 1;
+}
+.artist-name {
+  padding-top: 50px;
+  font-size: 31px;
+  color: black;
+  opacity: 0.5;
+}
+.artist-name-mobile {
+  position: absolute;
+  left: 30px;
+  color: black;
+  opacity: 0.5;
+}
+.container {
+  z-index: 1;
+}
+
+.portfolio {
+  padding-top: 20px;
+}
+
+#container-fluid{
+  z-index: 0;
+  background-size: 100%;
+  margin: 0;
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  left: 50px;
+  z-index: 12;
+}
+
+.artworks {
+  z-index: 30;
+  padding-top: 100px;
+  right: 0;
+}
+
+.figure-img {
+margin-bottom: 0px;
+}
+
+.caption {
+    text-align: center;
+    font-size: 2.250em;
+    color: black;
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    visibility: hidden;
+}
+
+.caption:hover {
+  visibility: visible;
+  opacity: 0.5;
+  transition: ease 0.5s;
+}
+
+.menu {
+  right: 0px;
+  background: white;
+  z-index: 500;
+  border-left: 0.3px solid #333;
+  text-align: right;
+  height: 100%;
+  position: fixed;
+}
+
+.upper-menu {
+  padding-right: 90px;
+  top: 50px;
+  right: 0px;
+}
+.navigation {
+  font-size: 1.875em;
+  line-height: 1.400em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.down-menu {
+  padding-right: 90px;
+  position: absolute;
+  right: 0px;
+  bottom: 100px;
+}
+
+.social-media h4 {
+  font-size: 1.875em;
+  margin: 0px;
+}
+
+.contact-menu {
+  padding-bottom: 80px;
+}
+
+.social-media h4:hover {
+  color: #b8b766;
+}
+
+.social-media h4 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.social-media {
+  padding-bottom: 40px;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #9d9d9d;
+}
+
+.navlink a:hover {
+  color: #b8b766;
+}
+
+i {
+  font-size: 1.875em;
+  padding-right: 10px;
+}
+
+.fab {
+  font-size: 1.8em;
+  margin: 3px;
+}
+
+.fab:hover {
+  color: #b8b766;
+}
+
+/* BOOTSTRAP */
+.navbar {
+    display: block;
+}
+
+.nav-mobile {
+  display: none;
+  visibility: hidden;
+  height: 70px;
+}
+
+label {
+  position: relative;
+  cursor: pointer;
+  width: 100vw;
+  background: white;
+  font-size: 1.5em;
+  padding: 15px;
+  margin-bottom: -6px;
+}
+label {
+  width: 100vw;
+  height: 70px;
+  border: 1px solid #fff;
+  display: inline-block;
+}
+#menu-toggle {
+  margin-top: 0;
+  display: none;
+}
+#menu {
+  background-color: #ffffff;
+  text-align: center;
+  border-bottom: black solid 1px;
+  overflow: hidden;
+  max-height: 0;
+  font-size: 1.5em;
+  margin: 0 auto;
+  -webkit-transition: all 0.3s ease;
+}
+#menu-toggle:checked + #menu {
+  max-height: 800px;
+}
+
+.fa-bars {
+  position: absolute;
+  right: 30px;
+}
+
+.copyright-mobile, .contact-menu-mobile, .social-media-mobile {
+  font-size: 0.5em;
+}
+.social-media-mobile {
+  padding-bottom: 20px;
+}
+.contact-menu-mobile {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.current {
+  color: #b8b766;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.95); /* Black w/ opacity */
+  z-index: 499;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Large desktop */
+
+@media (min-width: 1900px) {
+.item {
+  min-height: 350px;
+}
+.artworks {
+  padding-left: 100px;
+  padding-right: 70px;
+}
+.logo {
+  left: 100px;
+  }
+.portfolio {
+  padding-top: 50px;
+}
+.upper-menu {
+  padding-right: 130px;
+}
+.down-menu {
+  bottom: 50px;
+  padding-right: 130px;
+}
+h3 {
+  font-size: 2.035em;
+}
+.navigation {
+  font-size: 2.875em;
+  line-height: 1.400em;
+}
+.contact-menu h4, .social-media h4 {
+  font-size: 2.875em;
+}
+.copyright {
+  font-size: 16px;
+  color: #9d9d9d;
+}
+a {
+  text-decoration: none;
+}
+.fab {
+  font-size: 2.5em;
+  margin: 5px;
+}
+.col-lg-4 {
+  padding-bottom: 25px;
+}
+.artist-name {
+  font-size: 2.5em;
+}
+}
+@media (min-width: 1200px) {
+  .down-menu {
+  bottom: 20px;
+}
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+ .down-menu {
+  bottom: 20px;
+}
+  .menu, .upper-menu, .down-menu {
+    padding-left: 20px;
+    padding-right: 30px;
+  }
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+.nav-mobile {
+    display: block;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 200;
+  }
+    .navbar {
+      display: none;
+      visibility: hidden;
+    }
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    .nav-mobile {
+    display: block;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 200;
+  }
+    .navbar {
+      display: none;
+      visibility: hidden;
+    }
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .nav-mobile {
+    display: block;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 200;
+  }
+    .navbar {
+      display: none;
+      visibility: hidden;
+    }
+}
