@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
+<link href="css/glightbox.css" rel="stylesheet">
 </head>
   <body>
 
@@ -25,26 +26,6 @@
       <div class="container">
       <div class="title">Category: Illustration<br><br></div>
       <div class="row">
-        <figure class="art col-lg-3 col-md-4 col-xs-6" title="Birds">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="img/5.jpg" alt="">
-          </a>
-        </figure>
-        <figure class="art col-lg-3 col-md-4 col-xs-6" title="Birds">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="img/6.jpg" alt="">
-          </a>
-        </figure>
-        <figure class="art col-lg-3 col-md-4 col-xs-6" title="Birds">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="img/5.jpg" alt="">
-          </a>
-        </figure>
-        <figure class="art col-lg-3 col-md-4 col-xs-6" title="Birds">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="img/2.jpg" alt="">
-          </a>
-        </figure>
       </div>
     </div>
   </div>
@@ -92,6 +73,14 @@
     <!-- END MENU MOBILE --->
 
     </div> <!-- container fluid -->
-    <script src="js/activelinks.js"></script>
+     <script src="js/glightbox.js"></script>
+  <script src="js/activelinks.js"></script>
+
+    <!-- lightgallery plugins -->
+    <script type="text/javascript">
+    var myLightbox = GLightbox({
+    'selector': 'glightboxTest'
+    });
+    </script>
   </body>
 </html>
