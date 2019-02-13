@@ -324,3 +324,8 @@ label {
   text-decoration: none;
   cursor: pointer;
 }
+
+.img-thumbnail:hover {
+  opacity: 0.5;
+  transition: ease 0.5s;
+}
