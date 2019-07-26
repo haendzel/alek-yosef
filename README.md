@@ -67,3 +67,4 @@ You shouldn't deploy development-specific files such as:
 deploy.php
 app/themes/PROJECT_NAME/node_modules
 ```# alekjozefczyk-wp
+# alekjozefczyk-wp
